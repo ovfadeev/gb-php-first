@@ -18,6 +18,7 @@ $titleBrowser = "ДЗ 3 - Олег Фадеев";
           $i++;
         }
         echo "<br/>--------------------<br/>";
+
         /* --- 2 --- */
         $i = 0;
         do {
@@ -31,9 +32,25 @@ $titleBrowser = "ДЗ 3 - Олег Фадеев";
           $i++;
         } while ($i <= 10);
         echo "<br/>--------------------<br/>";
-        /* --- 3 --- */
 
+        /* --- 3 --- */
+        $arRegions = array(
+          "Московская область" => array(
+            "Москва", "Зеленоград", "Клин"
+          ),
+          "Ленинградская область" => array(
+            "Санкт-Петербург", "Всеволожск", "Павловск", "Кронштадт"
+          )
+        );
+        foreach ($arRegions as $region => $arCities) {
+          if (is_array($arCities)){
+            echo $region . ":<br/>";
+            echo implode(", ", $arCities);
+            echo "<br/>";
+          }
+        }
         echo "<br/>--------------------<br/>";
+
         /* --- 4 --- */
         function translit($string) {
           $converter = array(
@@ -54,6 +71,7 @@ $titleBrowser = "ДЗ 3 - Олег Фадеев";
         $str = "Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях.";
         echo translit($str);
         echo "<br/>--------------------<br/>";
+
         /* --- 5 --- */
         function spaceReplace($str){
           return str_replace(" ", "_", $str);
@@ -61,6 +79,7 @@ $titleBrowser = "ДЗ 3 - Олег Фадеев";
         $str = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto nesciunt minima aperiam, quaerat eius laboriosam optio maiores enim, nobis fugiat adipisci hic eum quasi, illo qui temporibus. Magni, est, expedita.";
         echo spaceReplace($str);
         echo "<br/>--------------------<br/>";
+
         /* --- 6 --- */
         function bildMenu($arMenu){
           $html = '';
@@ -110,12 +129,13 @@ $titleBrowser = "ДЗ 3 - Олег Фадеев";
         );
         echo bildMenu($arMenuItems);
         echo "<br/>--------------------<br/>";
-        /* --- 7 --- */
 
+        /* --- 7 --- */
+        for ($i = 0; $i < 10; print $i++ . " ") {}
         echo "<br/>--------------------<br/>";
+
         /* --- 8 --- */
-        
-        echo "<br/>--------------------<br/>";
+
         /* --- 9 --- */
         function bildUrl($str){
           return spaceReplace(translit(mb_strtolower($str)));
