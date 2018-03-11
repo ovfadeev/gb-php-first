@@ -1,10 +1,22 @@
 <?php
+require_once("function_user.php");
+
 function curPage(){
   return $_SERVER["REQUEST_URI"];
 }
 
 function prepareVariables($page_name) {
   switch ($page_name){
+    case "auth":
+      $vars['content'] = '../templates/auth.php';
+      $vars['title'] = "Авторизация";
+      break;
+
+    case "reg":
+      $vars['content'] = '../templates/registration.php';
+      $vars['title'] = "Регистрация";
+      break;
+
     case "index":
       $vars['content'] = '../templates/index.php';
       $vars['title'] = "Главная страница";

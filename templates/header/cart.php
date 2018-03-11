@@ -4,7 +4,11 @@
     <span>2</span>
   </div>
   <div class="account">
-    <a href="#">My Account <i></i></a>
+    <?if ($_SESSION["USER"]["ID"] > 0):?>
+      <a href="/personal/"><?=$_SESSION["USER"]["LOGIN"]?></a>
+    <?else:?>
+      <a href="/auth/">LOG IN</a>
+    <?endif?>
   </div>
   <div class="cart-dropdown-list js-cart-dropdown close">
     <div class="cart-dropdown-list-items">

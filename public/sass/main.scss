@@ -231,6 +231,40 @@ body {
         }
       }
     }
+    .form-title {
+      @include font('Lato-Regular', #222, 13px, 1);
+      text-transform: uppercase;
+      margin: 20px 0;
+    }
+    .form-subtitle {
+      @include font('Lato-Regular', #b3b2b2, 13px, 1);
+      margin: 20px 0;
+    }
+    .form-header {
+
+    }
+    .form-footer {
+      .form-footer-desc {
+        margin: 20px 0;
+        ul {
+          padding-left: 15px;
+          &:hover {
+            li {
+              color: $colorCorp;
+            }
+          }
+          li {
+            list-style-image: url('../images/icons/list-style.png');
+            @include font('Lato-Regular', #b3b2b2, 13px, 1);
+            padding-bottom: 10px;
+            cursor: pointer;
+          }
+        }
+        .required {
+          @include font('Lato-Regular', #ff0d0d, 13px, 1);
+        }
+      }
+    }
     .submit {
       .btn {
         display: inline-block;
@@ -259,6 +293,17 @@ body {
         vertical-align: middle;
         @include font('Lato-Regular', #323232, 13px, 1);
         margin-left: 30px;
+        &:hover {
+          color: $colorCorp;
+        }
+      }
+    }
+    .form-desc {
+      margin: 20px 0;
+      a {
+        display: inline-block;
+        vertical-align: middle;
+        @include font('Lato-Regular', #323232, 13px, 1);
         &:hover {
           color: $colorCorp;
         }

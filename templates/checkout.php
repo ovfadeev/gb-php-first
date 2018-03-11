@@ -1,14 +1,8 @@
 <div class="page-default page-checkout" id="app" data-app="page-checkout">
   <div class="wrapper">
     <div class="page-title">
-      <h1>New Arrivals</h1>
-      <div class="breadcrumb">
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Men</a></li>
-          <li><a href="#">New Arrivals</a></li>
-        </ul>
-      </div>
+      <h1><?=$content["title"]?></h1>
+      <?include("other/breadcrumbs.php");?>
     </div>
     <section class="checkout-steps js-checkout-accordion">
       <div class="step-row">
