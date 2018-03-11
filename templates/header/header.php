@@ -17,7 +17,7 @@
     <header class="global-header">
       <div class="wrapper">
         <div class="logo">
-          <a href="#" title="logo"></a>
+          <a href="/" title="logo"></a>
         </div>
         <?include("search.php");?>
         <?include("cart.php");?>

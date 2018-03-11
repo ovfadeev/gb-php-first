@@ -15,7 +15,7 @@
       <div class="wrapper">
         <div class="corp-cnt">
           <div class="logo">
-            <a href="#" title="logo"></a>
+            <a href="/" title="logo"></a>
           </div>
           <?include("about.php");?>
         </div>
