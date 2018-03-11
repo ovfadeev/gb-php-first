@@ -1,16 +1,10 @@
 <?php
+session_start();
+$_SESSION["SESSION_ID"] = session_id();
+
 require_once('../config/init.php');
-
-echo "<pre>";
-print_r($_SESSION);
-echo "</pre>";
-echo "<pre>";
-print_r($_REQUEST);
-echo "</pre>";
-
 // auth
-$isAuth = "";
-
+$isAuth = auth(htmlspecialchars($_POST["login"]), htmlspecialchars($_POST["password"]));
 // registration
 if (strlen($_POST["registration"]) > 0)
 {
@@ -39,6 +33,13 @@ else
 // content
 $content = prepareVariables($page_name);
 require('../templates/bases.php');
+
+echo "<pre>";
+print_r($_SESSION);
+echo "</pre>";
+echo "<pre>";
+print_r($_REQUEST);
+echo "</pre>";
 
 // if (!$_POST['metod'] == 'ajax')
 // {

@@ -5,7 +5,7 @@
       <?include("other/breadcrumbs.php");?>
     </div>
     <section class="auth">
-      <form action="">
+      <form action="/auth/" method="post">
         <div class="form-cnt">
           <div class="form-wrapper">
             <div class="input-fields">
@@ -26,7 +26,7 @@
               </div>
             </div>
             <div class="submit">
-              <input type="submit" class="btn js-form-submit" name="apply" value="Log In" />
+              <input type="submit" class="btn js-form-submit" name="auth" value="Log In" />
               <a href="#">Forgot Password?</a>
             </div>
             <div class="form-desc">
