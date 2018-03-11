@@ -41,7 +41,7 @@ function auth($login = null, $pass = null){
     $isAuth = checkAuthWithSession($_SESSION["USER"]);
     // echo "Авторизация по сессии";
   endif;
-  if ($_POST['ExitLogin']):
+  if ($_POST['logout']):
     $isAuth = UserExit();
   endif;
   return $isAuth;
@@ -91,25 +91,19 @@ function authWithCredential($login, $password)
 Авторизация при помощи сессий
 При переходе между страницами происходит автоматическая авторизация
 */
-function checkAuthWithSession($IdUserSession){
+function checkAuthWithSession($userSession){
+  $tableName = "users";
   $isAuth = 0;
   $link = getConnection();
-  $hash_cookie = mysqli_real_escape_string($link, $IdUserSession);
-  $sql = "select users.login, users_auth.* from users_auth INNER JOIN Users on users_auth.id_user = Users.id_user where users_auth.hash_cookie = '$hash_cookie'";
-
-  $user_date = getResult($sql);
-  if ($user_date)
-  {
-    $_SESSION['login'] = $user_date['login'];
-    $_SESSION['IdUserSession'] = $IdUserSession;
+  $idUserSession = mysqli_real_escape_string($link, $userSession["ID"]);
+  $sql = "select id from ".$tableName." where id ='".$idUserSession."'";
+  $user = current(getResult($sql));
+  if ($user):
     $isAuth = 1;
-  }
-  else
-  {
+  else:
     $isAuth = 0;
     UserExit();
-  }
-
+  endif;
   return $isAuth;
 }
 ?>

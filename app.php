@@ -1,7 +1,5 @@
 <?php
 session_start();
-$_SESSION["SESSION_ID"] = session_id();
-
 require_once('../config/init.php');
 // auth
 $isAuth = auth(htmlspecialchars($_POST["login"]), htmlspecialchars($_POST["password"]));
@@ -21,14 +19,11 @@ if (strlen($_POST["registration"]) > 0)
 
 // routing
 $url_array = explode("/", $_SERVER['REQUEST_URI']);
-if ($url_array[1] == "")
-{
+if ($url_array[1] == ""):
 	$page_name = "index";
-}
-else
-{
+else:
 	$page_name = $url_array[1];
-}
+endif;
 
 // content
 $content = prepareVariables($page_name);
@@ -39,6 +34,9 @@ print_r($_SESSION);
 echo "</pre>";
 echo "<pre>";
 print_r($_REQUEST);
+echo "</pre>";
+echo "<pre>";
+print_r($_SERVER);
 echo "</pre>";
 
 // if (!$_POST['metod'] == 'ajax')
