@@ -4,9 +4,6 @@ session_start();
 require_once('../config/init.php');
 
 echo "<pre>";
-print_r($_SERVER);
-echo "</pre>";
-echo "<pre>";
 print_r($_SESSION);
 echo "</pre>";
 
