@@ -1,4 +1,8 @@
 <?php
+function curPage(){
+  return $_SERVER["REQUEST_URI"];
+}
+
 function prepareVariables($page_name) {
   switch ($page_name){
     case "index":
@@ -19,6 +23,16 @@ function prepareVariables($page_name) {
     case "checkout":
       $vars['content'] = '../templates/checkout.php';
       $vars['title'] = "Оформление заказа";
+      break;
+
+    case "featured":
+      $vars['content'] = '../templates/featured.php';
+      $vars['title'] = "Популярные товары";
+      break;
+
+    case "hot-deals":
+      $vars['content'] = '../templates/hot-deals.php';
+      $vars['title'] = "Горящее предложение";
       break;
 
     case "register":

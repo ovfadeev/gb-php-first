@@ -1,10 +1,11 @@
 <?php
-session_start();
-
 require_once('../config/init.php');
 
 echo "<pre>";
 print_r($_SESSION);
+echo "</pre>";
+echo "<pre>";
+print_r($_REQUEST);
 echo "</pre>";
 
 // $isAuth = auth($_POST['login'], $_POST['pass'], $_POST['rememberme']);
@@ -27,7 +28,7 @@ echo "<pre>";
 print_r($content);
 echo "</pre>";
 
-require '../templates/bases.php';
+require('../templates/bases.php');
 
 // if (!$_POST['metod'] == 'ajax')
 // {

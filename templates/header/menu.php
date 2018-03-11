@@ -1,9 +1,9 @@
+<?php
+include("../templates/menu/main-menu.php");
+$curpage = curPage();
+?>
 <nav class="global-nav">
-  <a href="#">Home</a>
-  <a href="#">Man</a>
-  <a href="#">Women</a>
-  <a href="#">Kids</a>
-  <a href="#">Accoseriese</a>
-  <a href="#">Featured</a>
-  <a href="#">Hot Deals</a>
+  <?foreach ($arMenu as $key => $arItem) :?>
+    <a href="<?=$arItem["link"]?>" class="<?if ($curpage == $arItem["link"]): echo 'active'; endif;?>"><?=$arItem["text"]?></a>
+  <?endforeach?>
 </nav>
