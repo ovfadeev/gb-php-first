@@ -156,3 +156,35 @@
     </div>
   </div>
 </div>
+<?if ($page):?>
+  <div class="nav-page">
+    <div class="page">
+      <ul>
+        <li>
+          <a href="#" class="prev"></a>
+        </li>
+        <li>
+          <a href="#">1</a>
+        </li>
+        <li class="active">
+          <div>2</div>
+        </li>
+        <li>
+          <a href="#">3</a>
+        </li>
+        <li>
+          <a href="#">4</a>
+        </li>
+        <li>
+          <a href="#">5</a>
+        </li>
+        <li>
+          <a href="#" class="next"></a>
+        </li>
+      </ul>
+    </div>
+    <div class="page-btn">
+      <a href="#">View All</a>
+    </div>
+  </div>
+<?endif?>

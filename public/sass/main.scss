@@ -1590,10 +1590,9 @@ p {
               }
               input[type="number"] {
                 @include font('Lato-Regular', #575757, 13px, 1);
-                text-align: center;
                 padding: 5px;
                 border: 1px solid $colorBorder;
-                width: 30px;
+                width: 50px;
                 outline: none;
               }
               .remove-cart {

@@ -15,10 +15,10 @@
     </div>
     <div class="cart-action">
       <div class="cart-link">
-        <a href="checkout.html" class="btn-checkout">Checkout</a>
+        <a href="/checkout/" class="btn-checkout">Checkout</a>
       </div>
       <div class="cart-link">
-        <a href="cart.html" class="btn-cart">Go to cart</a>
+        <a href="/cart/" class="btn-cart">Go to cart</a>
       </div>
     </div>
   </div>

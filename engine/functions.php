@@ -5,8 +5,20 @@ function prepareVariables($page_name) {
       $vars['content'] = '../templates/index.php';
       $vars['title'] = "Главная страница";
       break;
-    case "contact":
 
+    case "catalog":
+      $vars['content'] = '../templates/catalog.php';
+      $vars['title'] = "Каталог";
+      break;
+
+    case "cart":
+      $vars['content'] = '../templates/cart.php';
+      $vars['title'] = "Корзина";
+      break;
+
+    case "checkout":
+      $vars['content'] = '../templates/checkout.php';
+      $vars['title'] = "Оформление заказа";
       break;
 
     case "register":

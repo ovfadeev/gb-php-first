@@ -3,7 +3,7 @@
 <!--[if IE 9]><html class="no-js ie9 no-placeholder" ><![endif]-->
 <head>
   <meta charset="utf-8" />
-  <title>Shop Brand — Олег Фадеев</title>
+  <title><?=$content["title"]?></title>
   <meta name="keywords" content="" />
   <meta name="description" content="" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />

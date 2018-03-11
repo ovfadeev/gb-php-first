@@ -1,6 +1,6 @@
 <nav class="global-nav">
   <a href="#">Home</a>
-  <a href="#" class="active">Man</a>
+  <a href="#">Man</a>
   <a href="#">Women</a>
   <a href="#">Kids</a>
   <a href="#">Accoseriese</a>

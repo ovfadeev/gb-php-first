@@ -3,7 +3,7 @@
       <div class="wrapper">
         <div class="cols-cnt">
           <div class="cols">
-            <?include("slider_reviews.php");?>
+            <?include("slider-reviews.php");?>
           </div>
           <div class="cols">
             <?include("subscribe.php");?>
