@@ -16,4 +16,6 @@ require_once('../engine/function_reviews.php');
 require_once('../engine/function_subscribe.php');
 
 require_once("../engine/function_user.php");
+
+require_once('../engine/forms.php');
 ?>
