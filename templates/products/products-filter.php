@@ -61,7 +61,7 @@
         <div class="items-param">
           <div class="param-radio">
             <label>
-              <input type="radio" name="param2" value="2_1" checked />
+              <input type="radio" name="param2" value="2_1" />
               <i></i>
               XXS
             </label>

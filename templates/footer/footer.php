@@ -35,6 +35,7 @@
     
   </div>
   <script type="text/javascript" src="/js/vendors/jquery-1.10.2.min.js"></script>
+  <script type="text/javascript" src="/js/vendors/jquery-ui.min.js"></script>
   <script type="text/javascript" src="/js/vendors/jquery.bxslider.min.js"></script>
   <script type="text/javascript" src="/js/vendors/jquery.fancybox.min.js"></script>
   <!-- <script type="text/javascript" src="/js/vendors/jquery.ui.min.js"></script> -->
