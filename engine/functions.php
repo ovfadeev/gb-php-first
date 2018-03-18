@@ -1,6 +1,4 @@
 <?php
-require_once("function_user.php");
-
 function curPage(){
   return $_SERVER["REQUEST_URI"];
 }

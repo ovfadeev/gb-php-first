@@ -1,5 +1,4 @@
 <?php
-session_start();
 require_once('../config/init.php');
 // auth
 $isAuth = auth(htmlspecialchars($_POST["login"]), htmlspecialchars($_POST["password"]));
