@@ -32,21 +32,25 @@ function prepareVariables($arUrl) {
     case "cart":
       $vars['content'] = '../templates/cart.php';
       $vars['title'] = "Корзина";
+      $vars['basket'] = "";
       break;
 
     case "checkout":
       $vars['content'] = '../templates/checkout.php';
       $vars['title'] = "Оформление заказа";
+      $vars['basket'] = "";
       break;
 
     case "featured":
       $vars['content'] = '../templates/featured.php';
       $vars['title'] = "Популярные товары";
+      $vars['products'] = "";
       break;
 
     case "hot-deals":
       $vars['content'] = '../templates/hot-deals.php';
       $vars['title'] = "Горящее предложение";
+      $vars['products'] = "";
       break;
 
     case "auth":
