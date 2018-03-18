@@ -3,7 +3,15 @@ function curPage(){
   return $_SERVER["REQUEST_URI"];
 }
 
-function prepareVariables($page_name) {
+function prepareVariables($arUrl) {
+  if ($arUrl[1] == ""):
+    $page_name = "index";
+  else:
+    $page_name = $arUrl[1];
+    $category = $arUrl[2];
+    $id_prod = $arUrl[3];
+  endif;
+
   switch ($page_name){
     case "auth":
       $vars['content'] = '../templates/auth.php';
@@ -45,13 +53,15 @@ function prepareVariables($page_name) {
       $vars['title'] = "Горящее предложение";
       break;
 
-    case "register":
-
-      break;
-
     case "feedback":
 
       break;
+
+    default:
+      $vars['content'] = '../templates/404.php';
+      $vars['title'] = "404";
+      header("HTTP/1.0 404 Not Found");
+    break;
   }
   return $vars;
 }
