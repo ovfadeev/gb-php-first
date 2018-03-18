@@ -16,6 +16,49 @@ body {
   min-width: $wrapperWidth;
   @include font('Lato-Regular', #000, 16px, 1);
   background: #fff;
+  .form-cnt {
+    .form-wrapper {
+      margin: 0 auto;
+      padding: 20px 0;
+      width: 420px;
+    }
+    .form-title {
+      text-align: center;
+    }
+    .message-form {
+      text-align: center;
+      div {
+        @include font('Lato-Regular', #000, 15px, 20px);
+      }
+    }
+  }
+  .subscribe-fbx-cnt {
+    .fbx-body {
+      .form-cnt {
+        .form-wrapper {
+          width: 450px;
+        }
+        form {
+          .form-input {
+            input {
+              width: 420px;
+            }
+            textarea {
+              width: 420px;
+            }
+            select {
+              width: 420px;
+            }
+            .captcha-input {
+              input {
+                width: 230px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 .main {
@@ -907,6 +950,19 @@ body {
         }
       }
     }
+  }
+}
+
+.fbx-cnt {
+  width: 500px !important;
+  padding: 0 !important;
+  .fbx-title {
+    text-align: center !important;
+    margin: 40px 0;
+    @include font('Lato-Bold', $colorText, 30px, 30px);
+  }
+  .fbx-body {
+    @include font('Lato-Regular', $colorText, 15px, 15px);
   }
 }
 

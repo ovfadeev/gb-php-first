@@ -25,10 +25,15 @@ var moduleApp = {
   'init':function(){
     this.searchDropdown();
     this.subscribeSlider();
+    this.subscribe();
     this.menuMobile();
     this.basketDropdown();
     this.checkBasket();
     this.validationForm();
+  },
+  'popupMessage':function($title, $msg){
+    var html = '<div class="fbx-cnt">' + '<div class="fbx-title">' + $title + '</div>' + '<div class="fbx-body">' + '<div class="form-cnt">' + '<div class="form-wrapper">' + $msg + '</div>' + '</div>' + '</div>' + '</div>';
+    $.fancybox.open(html);
   },
   'searchDropdown':function(){
     $('.search-dropdown-title a').on('click', function(e){
@@ -73,6 +78,23 @@ var moduleApp = {
         pager: true,
       }
     );
+  },
+  'subscribe':function(){
+    $('.js-subscribe-submit').on('click', function(e){
+      e.preventDefault();
+      $.ajax({
+        url: '/ajax/subscribe.php',
+        data: $(this).closest('form').serialize(),
+        type: 'POST',
+        dataType: 'json',
+        success: function(data){
+          moduleApp.popupMessage('Подписка', $data.msg);
+        },
+        error: function(){
+          moduleApp.popupMessage('Подписка', 'Ошибка. Попробуйте позже...');
+        }
+      });
+    });
   },
   'filterProductsRange':function(){
     var minRange = parseFloat($('.js-filter-slider-range').attr('data-min')),
