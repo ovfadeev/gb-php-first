@@ -16,12 +16,17 @@ function prepareVariables($arUrl) {
     case "index":
       $vars['content'] = '../templates/index.php';
       $vars['title'] = "Главная страница";
+      $vars['slider'] = "";
       $vars['products'] = "";
+      $vars['categories'] = "";
       break;
 
     case "catalog":
       $vars['content'] = '../templates/catalog.php';
       $vars['title'] = "Каталог";
+      $vars['menu'] = "";
+      $vars['products'] = "";
+      $vars['filter'] = "";
       break;
 
     case "cart":
