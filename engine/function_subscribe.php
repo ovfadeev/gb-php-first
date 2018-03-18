@@ -6,7 +6,7 @@ function addSubcribe($email){
     $insertSql = "INSERT INTO ".$tableName." (email) value ('".$email."')";
     $res["result"] = executeQuery($insertSql);
     if ($res["result"]):
-      $res["msg"] = "Успешно";
+      $res["msg"] = "Ваш email успешно добавлен.";
     else:
       $res["msg"] = "Ошибка. Попробуйте позже...";
     endif;

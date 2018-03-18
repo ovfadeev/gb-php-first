@@ -3,7 +3,7 @@ require_once('../config/init.php');
 // auth
 $isAuth = auth(htmlspecialchars($_POST["login"]), htmlspecialchars($_POST["password"]));
 // registration
-if (strlen($_POST["registration"]) > 0)
+if (strlen($_POST["type"]) > 0 && htmlspecialchars($_POST["type"]) == "registration")
 {
   $arParams = array(
     "login" => htmlspecialchars($_POST["login"]),
@@ -15,11 +15,37 @@ if (strlen($_POST["registration"]) > 0)
   );
   $resReg = register($arParams);
 }
+// subscribe
+if (strlen($_POST["type"]) > 0 && htmlspecialchars($_POST["type"]) == "subscribe")
+{
+  if ($_POST["email"] != "")
+  {
+    echo json_encode(addSubcribe(htmlspecialchars($_POST["email"])));
+  }
+  else
+  {
+    echo json_encode(
+      array(
+        "result" => false,
+        "msg" => "Введите email"
+      )
+    );
+  }
+  die();
+}
 
 // routing
 $url_array = explode("/", $_SERVER['REQUEST_URI']);
+echo "<pre>";
+print_r($url_array);
+echo "</pre>";
+echo "<pre>";
+print_r($_REQUEST);
+echo "</pre>";
 if ($url_array[1] == ""):
 	$page_name = "index";
+elseif ($url_array[1] == "ajax"):
+
 else:
 	$page_name = $url_array[1];
 endif;

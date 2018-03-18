@@ -7,6 +7,7 @@
     <section class="registration">
       <?if (!$isAuth):?>
         <form action="/reg/" method="post">
+          <input type="hidden" name="type" value="registration">
           <div class="form-cnt">
             <div class="form-wrapper">
               <?if ($resReg):?>

@@ -7,6 +7,7 @@
   </div>
   <div class="form-cnt">
     <form>
+      <input type="hidden" name="type" value="subscribe">
       <div class="form-input input">
         <input type="email" name="email" value="" placeholder="Enter Your Email" required pattern="^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$">
       </div>

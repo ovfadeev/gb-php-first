@@ -83,12 +83,12 @@ var moduleApp = {
     $('.js-subscribe-submit').on('click', function(e){
       e.preventDefault();
       $.ajax({
-        url: '/ajax/subscribe.php',
+        url: '/index.php',
         data: $(this).closest('form').serialize(),
         type: 'POST',
         dataType: 'json',
         success: function(data){
-          moduleApp.popupMessage('Подписка', $data.msg);
+          moduleApp.popupMessage('Подписка', data.msg);
         },
         error: function(){
           moduleApp.popupMessage('Подписка', 'Ошибка. Попробуйте позже...');
