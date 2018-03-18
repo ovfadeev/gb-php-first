@@ -13,19 +13,10 @@ function prepareVariables($arUrl) {
   endif;
 
   switch ($page_name){
-    case "auth":
-      $vars['content'] = '../templates/auth.php';
-      $vars['title'] = "Авторизация";
-      break;
-
-    case "reg":
-      $vars['content'] = '../templates/registration.php';
-      $vars['title'] = "Регистрация";
-      break;
-
     case "index":
       $vars['content'] = '../templates/index.php';
       $vars['title'] = "Главная страница";
+      $vars['products'] = "";
       break;
 
     case "catalog":
@@ -51,6 +42,16 @@ function prepareVariables($arUrl) {
     case "hot-deals":
       $vars['content'] = '../templates/hot-deals.php';
       $vars['title'] = "Горящее предложение";
+      break;
+
+    case "auth":
+      $vars['content'] = '../templates/auth.php';
+      $vars['title'] = "Авторизация";
+      break;
+
+    case "reg":
+      $vars['content'] = '../templates/registration.php';
+      $vars['title'] = "Регистрация";
       break;
 
     case "feedback":
