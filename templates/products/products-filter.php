@@ -8,7 +8,7 @@
         <div class="items-param">
           <div class="param-checkbox-text">
             <label>
-              <input type="checkbox" name="param1" value="1_1" checked />
+              <input type="checkbox" name="param1" value="1_1" />
               <span>Bohemian</span>
             </label>
           </div>
