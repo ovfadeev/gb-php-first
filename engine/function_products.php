@@ -38,7 +38,9 @@ function getProducts($arParams = null){
       $category = getProductCategory($arParams["where"]["category"]);
       $sql .= " category_id='".intval($category["id"])."'";
     endif;
-    if ($arParams["where"]["id_prod"]):
+    if (is_array($arParams["where"]["id_prod"])):
+      $sql .= " id in ('".implode(',', $arParams["where"]["id_prod"])."')";
+    elseif ($arParams["where"]["id_prod"]):
       $sql .= " id='".intval($arParams["where"]["id_prod"])."'";
     endif;
   endif;
