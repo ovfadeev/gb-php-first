@@ -124,7 +124,8 @@ Basket.prototype.collectBasketItems = function () {
   $.ajax({
     url: '/index.php',
     data: {
-      user_id: 1
+      type: 'get_basket',
+      user_id: 3
     },
     dataType: 'json',
     success: function (data) {

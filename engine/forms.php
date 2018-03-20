@@ -29,7 +29,7 @@ if (strlen($_POST["type"]) > 0 && htmlspecialchars($_POST["type"]) == "subscribe
   die();
 endif;
 // add products
-if (strlen($_POST["type"]) > 0 && htmlspecialchars($_POST["type"]) == "products"):
+if (strlen($_POST["type"]) > 0 && htmlspecialchars($_POST["type"]) == "get_basket"):
   
   die();
 endif;
