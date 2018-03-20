@@ -16,7 +16,13 @@ function prepareVariables($arUrl) {
       $vars['content'] = '../templates/index.php';
       $vars['title'] = "Главная страница";
       $vars['slider'] = "";
-      $vars['products'] = "";
+      $arParams = array(
+        "where" => array(
+          "status" => 1
+        ),
+        "limit" => 12
+      );
+      $vars['products'] = getProducts($arParams);
       $vars['categories'] = "";
       break;
 
