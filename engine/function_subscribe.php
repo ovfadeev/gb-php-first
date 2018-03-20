@@ -2,13 +2,15 @@
 /*
 Таблица подписок
  */
-function getNameTableSubscribe(){
+function getNameTableSubscribe()
+{
   return "s_subscribe";
 }
 /*
 Добавляем подписку
  */
-function addSubcribe($email){
+function addSubcribe($email)
+{
   $tableName = getNameTableSubscribe();
   $findSql = "select * from ".$tableName." WHERE email='".$email."'";
   if (!getResult($findSql)): // если есть такая запись

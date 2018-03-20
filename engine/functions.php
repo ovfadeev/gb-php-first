@@ -1,9 +1,11 @@
 <?php
-function curPage(){
+function curPage()
+{
   return $_SERVER["REQUEST_URI"];
 }
 
-function prepareVariables($arUrl) {
+function prepareVariables($arUrl)
+{
   if ($arUrl[1] == ""):
     $page_name = "index";
   else:

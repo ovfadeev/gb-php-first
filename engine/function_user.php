@@ -2,13 +2,15 @@
 /*
 Название таблицы пользователей
  */
-function getNameTableUser(){
+function getNameTableUser()
+{
   return "s_users";
 }
 /*
 Регистрация
  */
-function register($arParams){
+function register($arParams)
+{
   $tableName = getNameTableUser();
   $findSql = "select * from ".$tableName." WHERE login='".$arParams["login"]."'";
   if (!getResult($findSql)): // если есть такая запись
@@ -38,7 +40,8 @@ function register($arParams){
 /*
 Авторизация
  */
-function auth($login = null, $pass = null){
+function auth($login = null, $pass = null)
+{
   $isAuth = false;
   if (!empty($login)):   //Если попытка авторизации через форму, то пытаемся авторизоваться
     $isAuth = authWithCredential($login, $pass);
@@ -55,7 +58,8 @@ function auth($login = null, $pass = null){
 /*
 Выход пользователя
 */
-function UserExit(){
+function UserExit()
+{
   unset($_SESSION);
   unset($_SESSION["USER"]);
   return false;
@@ -63,7 +67,8 @@ function UserExit(){
 /*
 Авторизация пользователя по форме
 */
-function authWithCredential($login, $password){
+function authWithCredential($login, $password)
+{
   $tableName = getNameTableUser();
   $isAuth = false;
   $link = getConnection();
@@ -95,7 +100,8 @@ function authWithCredential($login, $password){
 Авторизация при помощи сессий
 При переходе между страницами происходит автоматическая авторизация
 */
-function checkAuthWithSession($userSession){
+function checkAuthWithSession($userSession)
+{
   $tableName = getNameTableUser();
   $isAuth = 0;
   $link = getConnection();
@@ -113,7 +119,8 @@ function checkAuthWithSession($userSession){
 /*
 Пользователь
  */
-function getUser($idUser){
+function getUser($idUser)
+{
   $tableName = getNameTableUser();
   $sql = "select * from ".$tableName." where id ='".$idUser."'";
   $user = current(getResult($sql));

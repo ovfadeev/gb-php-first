@@ -2,31 +2,36 @@
 /*
 Таблица товаров каталога
  */
-function getTableProducts(){
+function getTableProducts()
+{
   return "s_catalog_products";
 }
 /*
 Таблица категорий товаров каталога
  */
-function getTableCategory(){
+function getTableCategory()
+{
   return "s_catalog_category";
 }
 /*
 Таблица размеров товаров каталога
  */
-function getTableProductSize(){
+function getTableProductSize()
+{
   return "s_catalog_product_size";
 }
 /*
 Таблица цветов товаров каталога
  */
-function getTableProductColor(){
+function getTableProductColor()
+{
   return "s_catalog_product_color";
 }
 /*
 Достаем товары
  */
-function getProducts($arParams = null){
+function getProducts($arParams = null)
+{
   $tableName = getTableProducts();
   $sql = "select * from ".$tableName."";
   if ($arParams["where"]):
@@ -68,7 +73,8 @@ function getProducts($arParams = null){
 /*
 Достаем размеры
  */
-function getProductSize($id){
+function getProductSize($id)
+{
   $tableName = getTableProductSize();
   $sql = "select * from ".$tableName." where id='".intval($id)."';";
   $size = current(getResult($sql));
@@ -80,7 +86,8 @@ function getProductSize($id){
 /*
 Достаем цвет
  */
-function getProductColor($id){
+function getProductColor($id)
+{
   $tableName = getTableProductColor();
   $sql = "select * from ".$tableName." where id='".intval($id)."';";
   $color = current(getResult($sql));
@@ -92,7 +99,8 @@ function getProductColor($id){
 /*
 Достаем категорию товаров
  */
-function getProductCategory($code){
+function getProductCategory($code)
+{
   $tableName = getTableCategory();
   $sql = "select * from ".$tableName." where code='".$code."';";
   $category = current(getResult($sql));

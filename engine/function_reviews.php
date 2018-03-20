@@ -2,13 +2,15 @@
 /*
 Таблица отзывов
  */
-function getTableReviews(){
+function getTableReviews()
+{
   return "s_reviews";
 }
 /*
 Достаем отзывы
  */
-function getReviews($arParams = null){
+function getReviews($arParams = null)
+{
   $tableName = getTableReviews();
   $sql = "select * from ".$tableName."";
   $sql .= ";";

@@ -2,11 +2,13 @@
 /*
 Таблица карзин пользователей
  */
-function getTableBasket(){
+function getTableBasket()
+{
   return "s_basket";
 }
 
-function getBasketUser($idUser){
+function getBasketUser($idUser)
+{
   $tableName = getTableProductSize();
   $sql = "select * from ".$tableName." where id='".intval($id)."';";
   $basket = getResult($sql);
