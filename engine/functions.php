@@ -91,6 +91,7 @@ function prepareVariables($arUrl) {
       header("HTTP/1.0 404 Not Found");
     break;
   }
+  $vars['reviews'] = getReviews();
   return $vars;
 }
 ?>

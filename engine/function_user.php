@@ -110,4 +110,16 @@ function checkAuthWithSession($userSession){
   endif;
   return $isAuth;
 }
+/*
+Пользователь
+ */
+function getUser($idUser){
+  $tableName = getNameTableUser();
+  $sql = "select * from ".$tableName." where id ='".$idUser."'";
+  $user = current(getResult($sql));
+  if ($user):
+    return $user;
+  endif;
+  return false;
+}
 ?>
