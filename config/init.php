@@ -1,6 +1,10 @@
 <?php
+// session
+session_id();
 session_start();
+$_SESSION["SESSION_ID"] = session_id();
 
+// scripts
 require_once('../config/config.php');
 
 require_once('../engine/functions.php');

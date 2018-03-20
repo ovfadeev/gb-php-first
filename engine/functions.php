@@ -101,6 +101,7 @@ function prepareVariables($arUrl) {
       header("HTTP/1.0 404 Not Found");
     break;
   }
+  $vars["basket"] = getBasketUser($_SESSION["USER"]["ID"]);
   $vars['reviews'] = getReviews();
   return $vars;
 }

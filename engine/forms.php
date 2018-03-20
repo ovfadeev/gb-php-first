@@ -28,9 +28,9 @@ if (strlen($_POST["type"]) > 0 && htmlspecialchars($_POST["type"]) == "subscribe
   endif;
   die();
 endif;
-// add products
-if (strlen($_POST["type"]) > 0 && htmlspecialchars($_POST["type"]) == "get_basket"):
-  
+// get basket
+if (strlen($GET["type"]) > 0 && htmlspecialchars($GET["type"]) == "getbasket"):
+  echo file_get_contents("../public/ajax/getbasket.json");
   die();
 endif;
 ?>
