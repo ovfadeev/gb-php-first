@@ -1,6 +1,6 @@
 <?if ($content["products"]):?>
   <div class="product-list">
-    <?foreach($content["products"] as $key => $arItems):?>
+    <?foreach($content["products"]["items"] as $key => $arItems):?>
       <div class="product-list-items">
         <div class="product-item">
           <div class="image" style="background-image: url('<?=$arItems["image"]?>');">

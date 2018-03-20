@@ -11,7 +11,6 @@ function prepareVariables($arUrl) {
     $category = $arUrl[2];
     $id_prod = $arUrl[3];
   endif;
-
   switch ($page_name){
     case "index":
       $vars['content'] = '../templates/index.php';
@@ -25,14 +24,19 @@ function prepareVariables($arUrl) {
       if ($category != "" && $id_prod != ""):
         $vars['content'] = '../templates/catalog-detail.php';
         $arParams = array(
-          "category" => $category,
-          "id_prod" => $id_prod
+          "where" => array(
+            "category" => $category,
+            "id_prod" => $id_prod
+          )
         );
         $vars['products'] = getProducts($arParams);
       elseif ($category != ""):
         $vars['content'] = '../templates/catalog.php';
         $arParams = array(
-          "category" => $category
+          "where" => array(
+            "category" => $category
+          ),
+          "limit" => 12
         );
         $vars['products'] = getProducts($arParams);
       else:
