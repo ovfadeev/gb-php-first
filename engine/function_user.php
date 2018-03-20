@@ -1,9 +1,15 @@
 <?php
 /*
+Название таблицы пользователей
+ */
+function getNameTableUser(){
+  return "s_users";
+}
+/*
 Регистрация
  */
 function register($arParams){
-  $tableName = "users";
+  $tableName = getNameTableUser();
   $findSql = "select * from ".$tableName." WHERE login='".$arParams["login"]."'";
   if (!getResult($findSql)): // если есть такая запись
     if ($arParams["password"] == $arParams["confirm_password"]):
@@ -49,8 +55,7 @@ function auth($login = null, $pass = null){
 /*
 Выход пользователя
 */
-function UserExit()
-{
+function UserExit(){
   unset($_SESSION);
   unset($_SESSION["USER"]);
   return false;
@@ -58,9 +63,8 @@ function UserExit()
 /*
 Авторизация пользователя по форме
 */
-function authWithCredential($login, $password)
-{
-  $tableName = "users";
+function authWithCredential($login, $password){
+  $tableName = getNameTableUser();
   $isAuth = false;
   $link = getConnection();
   $login = mysqli_real_escape_string($link, $login);
@@ -92,7 +96,7 @@ function authWithCredential($login, $password)
 При переходе между страницами происходит автоматическая авторизация
 */
 function checkAuthWithSession($userSession){
-  $tableName = "users";
+  $tableName = getNameTableUser();
   $isAuth = 0;
   $link = getConnection();
   $idUserSession = mysqli_real_escape_string($link, $userSession["ID"]);

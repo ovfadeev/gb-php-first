@@ -1,6 +1,15 @@
 <?php
+/*
+Таблица подписок
+ */
+function getNameTableSubscribe(){
+  return "s_subscribe";
+}
+/*
+Добавляем подписку
+ */
 function addSubcribe($email){
-  $tableName = "subscribe";
+  $tableName = getNameTableSubscribe();
   $findSql = "select * from ".$tableName." WHERE email='".$email."'";
   if (!getResult($findSql)): // если есть такая запись
     $insertSql = "INSERT INTO ".$tableName." (email) value ('".$email."')";

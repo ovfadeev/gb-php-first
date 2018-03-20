@@ -1,161 +1,22 @@
-<div class="product-list">
-  <div class="product-list-items">
-    <div class="product-item">
-      <div class="image" style="background-image: url('/images/product1.jpg');">
-        <div class="image-overlay">
-          <a href="#" class="js-basket-add" data-id-product="345" data-name="Товар №345" data-quantity="1" data-price="400" data-image="images/product-cart-small.jpg" ><i></i>Add to cart</a>
+<?if ($content["products"]):?>
+  <div class="product-list">
+    <?foreach($content["products"] as $key => $arItems):?>
+      <div class="product-list-items">
+        <div class="product-item">
+          <div class="image" style="background-image: url('<?=$arItems["image"]?>');">
+            <div class="image-overlay">
+              <a href="#" class="js-basket-add" data-id-product="<?=$arItems["id"]?>"><i></i>Add to cart</a>
+            </div>
+          </div>
+          <div class="desc">
+            <div class="name"><?=$arItems["name"]?></div>
+            <div class="price">$<?=$arItems["price"]?></div>
+          </div>
         </div>
       </div>
-      <div class="desc">
-        <div class="name">Mango  People  T-shirt</div>
-        <div class="price">$52.00</div>
-      </div>
-    </div>
+    <?endforeach?>
   </div>
-  <div class="product-list-items">
-    <div class="product-item">
-      <div class="image" style="background-image: url('/images/product1.jpg');">
-        <div class="image-overlay">
-          <a href="#" class="js-basket-add" data-id-product="345" data-name="Товар №345" data-quantity="1" data-price="400" data-image="images/product-cart-small.jpg" ><i></i>Add to cart</a>
-        </div>
-      </div>
-      <div class="desc">
-        <div class="name">Mango  People  T-shirt</div>
-        <div class="price">$52.00</div>
-      </div>
-    </div>
-  </div>
-  <div class="product-list-items">
-    <div class="product-item">
-      <div class="image" style="background-image: url('/images/product1.jpg');">
-        <div class="image-overlay">
-          <a href="#" class="js-basket-add" data-id-product="123" data-name="Товар №123" data-quantity="1" data-price="300" data-image="images/product-cart-small.jpg" ><i></i>Add to cart</a>
-        </div>
-      </div>
-      <div class="desc">
-        <div class="name">Mango  People  T-shirt</div>
-        <div class="price">$52.00</div>
-      </div>
-    </div>
-  </div>
-  <div class="product-list-items">
-    <div class="product-item">
-      <div class="image" style="background-image: url('/images/product1.jpg');">
-        <div class="image-overlay">
-          <a href="#" class="js-basket-add" data-id-product="123" data-name="Товар №123" data-quantity="1" data-price="300" data-image="images/product-cart-small.jpg" ><i></i>Add to cart</a>
-        </div>
-      </div>
-      <div class="desc">
-        <div class="name">Mango  People  T-shirt</div>
-        <div class="price">$52.00</div>
-      </div>
-    </div>
-  </div>
-  <div class="product-list-items">
-    <div class="product-item">
-      <div class="image" style="background-image: url('/images/product1.jpg');">
-        <div class="image-overlay">
-          <a href="#" class="js-basket-add" data-id-product="123" data-name="Товар №123" data-quantity="1" data-price="300" data-image="images/product-cart-small.jpg" ><i></i>Add to cart</a>
-        </div>
-      </div>
-      <div class="desc">
-        <div class="name">Mango  People  T-shirt</div>
-        <div class="price">$52.00</div>
-      </div>
-    </div>
-  </div>
-  <div class="product-list-items">
-    <div class="product-item">
-      <div class="image" style="background-image: url('/images/product1.jpg');">
-        <div class="image-overlay">
-          <a href="#" class="js-basket-add" data-id-product="123" data-name="Товар №123" data-quantity="1" data-price="300" data-image="images/product-cart-small.jpg" ><i></i>Add to cart</a>
-        </div>
-      </div>
-      <div class="desc">
-        <div class="name">Mango  People  T-shirt</div>
-        <div class="price">$52.00</div>
-      </div>
-    </div>
-  </div>
-  <div class="product-list-items">
-    <div class="product-item">
-      <div class="image" style="background-image: url('/images/product1.jpg');">
-        <div class="image-overlay">
-          <a href="#" class="js-basket-add" data-id-product="123" data-name="Товар №123" data-quantity="1" data-price="300" data-image="images/product-cart-small.jpg" ><i></i>Add to cart</a>
-        </div>
-      </div>
-      <div class="desc">
-        <div class="name">Mango  People  T-shirt</div>
-        <div class="price">$52.00</div>
-      </div>
-    </div>
-  </div>
-  <div class="product-list-items">
-    <div class="product-item">
-      <div class="image" style="background-image: url('/images/product1.jpg');">
-        <div class="image-overlay">
-          <a href="#" class="js-basket-add" data-id-product="234" data-name="Товар №234" data-quantity="1" data-price="200" data-image="images/product-cart-small.jpg" ><i></i>Add to cart</a>
-        </div>
-      </div>
-      <div class="desc">
-        <div class="name">Mango  People  T-shirt</div>
-        <div class="price">$52.00</div>
-      </div>
-    </div>
-  </div>
-  <div class="product-list-items">
-    <div class="product-item">
-      <div class="image" style="background-image: url('/images/product1.jpg');">
-        <div class="image-overlay">
-          <a href="#" class="js-basket-add" data-id-product="234" data-name="Товар №234" data-quantity="1" data-price="200" data-image="images/product-cart-small.jpg" ><i></i>Add to cart</a>
-        </div>
-      </div>
-      <div class="desc">
-        <div class="name">Mango  People  T-shirt</div>
-        <div class="price">$52.00</div>
-      </div>
-    </div>
-  </div>
-  <div class="product-list-items">
-    <div class="product-item">
-      <div class="image" style="background-image: url('/images/product1.jpg');">
-        <div class="image-overlay">
-          <a href="#" class="js-basket-add" data-id-product="234" data-name="Товар №234" data-quantity="1" data-price="200" data-image="images/product-cart-small.jpg" ><i></i>Add to cart</a>
-        </div>
-      </div>
-      <div class="desc">
-        <div class="name">Mango  People  T-shirt</div>
-        <div class="price">$52.00</div>
-      </div>
-    </div>
-  </div>
-  <div class="product-list-items">
-    <div class="product-item">
-      <div class="image" style="background-image: url('/images/product1.jpg');">
-        <div class="image-overlay">
-          <a href="#" class="js-basket-add" data-id-product="234" data-name="Товар №234" data-quantity="1" data-price="200" data-image="images/product-cart-small.jpg" ><i></i>Add to cart</a>
-        </div>
-      </div>
-      <div class="desc">
-        <div class="name">Mango  People  T-shirt</div>
-        <div class="price">$52.00</div>
-      </div>
-    </div>
-  </div>
-  <div class="product-list-items">
-    <div class="product-item">
-      <div class="image" style="background-image: url('/images/product1.jpg');">
-        <div class="image-overlay">
-          <a href="#" class="js-basket-add" data-id-product="234" data-name="Товар №234" data-quantity="1" data-price="200" data-image="images/product-cart-small.jpg" ><i></i>Add to cart</a>
-        </div>
-      </div>
-      <div class="desc">
-        <div class="name">Mango  People  T-shirt</div>
-        <div class="price">$52.00</div>
-      </div>
-    </div>
-  </div>
-</div>
+<?endif?>
 <?if ($page):?>
   <div class="nav-page">
     <div class="page">

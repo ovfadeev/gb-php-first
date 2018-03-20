@@ -22,11 +22,29 @@ function prepareVariables($arUrl) {
       break;
 
     case "catalog":
-      $vars['content'] = '../templates/catalog.php';
-      $vars['title'] = "Каталог";
-      $vars['menu'] = "";
-      $vars['products'] = "";
-      $vars['filter'] = "";
+      if ($category != "" && $id_prod != ""):
+        $vars['content'] = '../templates/catalog-detail.php';
+        $arParams = array(
+          "category" => $category,
+          "id_prod" => $id_prod
+        );
+        $vars['products'] = getProducts($arParams);
+      elseif ($category != ""):
+        $vars['content'] = '../templates/catalog.php';
+        $arParams = array(
+          "category" => $category
+        );
+        $vars['products'] = getProducts($arParams);
+      else:
+        $arParams = array(
+          "limit" => 12
+        );
+        $vars['products'] = getProducts($arParams);
+        $vars['content'] = '../templates/catalog.php';
+        $vars['title'] = "Каталог";
+        $vars['menu'] = "";
+        $vars['filter'] = "";
+      endif;
       break;
 
     case "cart":
