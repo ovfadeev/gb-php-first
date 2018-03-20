@@ -40,7 +40,7 @@
   <script type="text/javascript" src="/js/vendors/jquery.fancybox.min.js"></script>
   <!-- <script type="text/javascript" src="/js/vendors/jquery.ui.min.js"></script> -->
   <script type="text/javascript" src="/js/vendors/Container.js"></script>
-  <script type="text/javascript" src="/js/vendors/Basket.js"></script>
+  <script type="text/javascript" src="/js/vendors/Basket.js?<?=time()?>"></script>
   <script type="text/javascript" src="/js/main.js?<?=time()?>"></script>
 </body>
 </html>

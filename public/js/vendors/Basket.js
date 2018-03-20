@@ -122,7 +122,7 @@ Basket.prototype.htmlItem = function (item) {
 
 Basket.prototype.collectBasketItems = function () {
   $.ajax({
-    url: 'ajax/getbasket.json',
+    url: '/index.php',
     data: {
       user_id: 1
     },
